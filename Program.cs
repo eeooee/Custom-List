@@ -24,7 +24,8 @@ namespace CustomList
             myList.Add(2);
             myList.Add(3);
             myList.Add(4);
-            myList.Add(0, 0);
+            myList.Add(5);
+            myList.Add(6);
             string message = myList.ToString();
             Console.WriteLine("List One \n {0}", message);
             CustomList<int> otherList;
