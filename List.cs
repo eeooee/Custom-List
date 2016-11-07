@@ -13,6 +13,8 @@ namespace CustomList
         int size;
         static int startingSize = 10;
         public T[] list;
+        //similar to the use of dthe default (for the type) equality operator 
+        public static Comparer<T> Default { get; }
         int positiveOffset = 1;
         int negativeOffset = -1;
         int neutralOffset = 0;

@@ -22,26 +22,30 @@ namespace CustomList
             myList.Add(4);
             myList.Add(0, 0);
             string message = myList.ToString();
-            Console.WriteLine(message);
+            Console.WriteLine("List One \n {0}", message);
             CustomList<int> otherList;
             otherList = new CustomList<int>();
+            otherList.Add(6);
             otherList.Add(5);
-            otherList.Add(9);
-            otherList.Add(9);
+            otherList.Add(4);
             otherList.Add(3);
-            otherList.Add(9);
+            otherList.Add(2);
             otherList.Add(1);
             otherList.Add(0);
-            //sumList = myList - otherList;
             message = otherList.ToString();
-            Console.WriteLine(message);
-            sumList = otherList.Zip( otherList, myList);
-
+            Console.WriteLine("List Two \n {0}", message);
+            sumList = otherList - myList;
             message = sumList.ToString();
-            Console.WriteLine(message);
+            Console.WriteLine("List two minus list one \n {0}", message);
+            sumList = myList + otherList;
+            message = sumList.ToString();
+            Console.WriteLine("List one plus list two \n {0}", message);
+            sumList = otherList.Zip(otherList, myList);
+            message = sumList.ToString();
+            Console.WriteLine("List one and list two zipped \n {0}", message);
             sumList.Sort();
             message = sumList.ToString();
-            Console.WriteLine(message);
+            Console.WriteLine("Sorted List \n {0}", message);
             Console.ReadLine();
 
         }
